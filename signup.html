@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.bg
+    {
+      background-repeat: round;
+      height: 500px;
+      position: fixed;
+      width: 1500px;
+    }
+	</style>
+</head>
+<body background="bgim1.jpg" class="bg">
+	<center>
+		<br/><br/>
+		<h1 style="font-family: candara; font-size: 50px; color:white;"><center>Sign Up for Free</center></h1>
+		<fieldset style="margin-right: 450px;margin-left: 480px;margin-bottom: 100px;margin-top:50px;border-color: white;" >
+ 		<table cellpadding="6" cellspacing="8">
+			<form action="signup.php" method="post">
+				<tr>
+					<td style="font-family: candara;font-size: 25px; color:white;">First Name:</td>
+					<td><input type="text" name="fname" placeholder="First Name" id="fname"  style="font-family: candara; font-size: 20px;"></td>
+					<td><span id="fn" style="font-family: candara; font-size: 15px;"></span></td>
+				</tr>
+				<tr>
+					<td style="font-family: candara;font-size: 25px; color:white;">Last Name:</td>
+					<td><input type="text" name="lname" placeholder="Last Name" id="lname"  style="font-family: candara; font-size: 20px;"></td>
+					<td><span id="ln" style="font-family: candara; font-size: 15px;"></span></td>
+				</tr>
+				<tr>
+					<td style="font-family: candara; font-size:25px; color:white;">Email:</td>
+					<td><input type="text" name="email" placeholder="Enter E-mail Address" id="email"  style="font-family: candara;font-size: 20px;"></td>
+					<td><span id="em" style="font-family: candara; font-size: 15px;"></span></td>
+				</tr>
+				<tr>
+					<td style="font-family: candara; font-size:25px; color:white;">Password:</td>
+					<td><input type="password" name="password" placeholder="Set a Password" id="password"  style="font-family: candara;font-size: 20px;"></td>
+					<td><span id="pw" style="font-family: candara; font-size: 15px;"></span></td>
+				</tr>
+				<tr></tr>
+				<tr>
+				<td></td>	
+				<td style="text-align: left;"><br /><input type="submit" name="submit" value="Get Started" style="color: black; font-size: 25px; font-family: candara"></td>
+				</tr>
+			</form>
+  		</table>
+  		</fieldset>
+  	</center>
+</body>
+<script type="text/javascript">
+      
+      function firstname() 
+      {
+        var a;
+        a=document.getElementById('fname').value;
+        if(a==null||a=="")
+        {
+            document.getElementById("fn").innerHTML ="Need to be filledout!";
+            document.getElementById("fn").style.color ='red' ;
+        }
+        else
+        {
+            document.getElementById("fn").innerHTML ="";
+            document.getElementById("fn").style.color ='red';
+        }
+      }
+      document.getElementById("fname").addEventListener("keyup",firstname);
+
+      function lastname() 
+      {
+        var b;
+        b=document.getElementById('lname').value;
+        if(b==null||b=="")
+        {
+            document.getElementById("ln").innerHTML ="Need to be filledout!";
+            document.getElementById("ln").style.color ='red' ;
+        }
+        else
+        {
+            document.getElementById("ln").innerHTML ="";
+            document.getElementById("ln").style.color ='red';
+        }
+      }
+      document.getElementById("lname").addEventListener("keyup",lastname);
+
+      function valemail() 
+      {
+        var c;
+        c=document.getElementById('email').value;
+        if(c==null||c=="")
+        {
+            document.getElementById("em").innerHTML ="Need to be filledout!";
+            document.getElementById("em").style.color ='red' ;
+        }
+        else if (c.indexOf('@') <= 0)
+        {
+            document.getElementById("em").innerHTML ="Invalid Email!";
+            document.getElementById("em").style.color ='red' ;
+        } 
+        else
+        {
+            document.getElementById("em").innerHTML ="";
+            document.getElementById("em").style.color ='red';
+        }
+      }
+      document.getElementById("email").addEventListener("keyup",valemail);  
+      function pass()
+      {
+        var d;
+        d = document.getElementById("password").value;
+        if(d==null||d=="")
+        {
+            document.getElementById("pw").innerHTML ="Need to be filledout!";
+            document.getElementById("pw").style.color ='red' ;
+        }
+        else if (d.length != 8)
+        {
+            document.getElementById("pw").innerHTML ="Invalid Password!";
+            document.getElementById("pw").style.color ='red' ;    
+        }
+        else
+        {
+            document.getElementById("pw").innerHTML ="";
+            document.getElementById("pw").style.color ='red'; 
+        }
+      }
+      document.getElementById("password").addEventListener("keyup",pass); 
+    </script>
+</script>
+</html>

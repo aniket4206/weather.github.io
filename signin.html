@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style type="text/css">
+			body 
+			{
+				color: white;
+				font-family: sans-serif;
+			}
+			a 
+			{
+				color: white;
+				text-decoration: none;
+			}
+			.icon
+			{
+				font-family: FontAwesome;
+			}
+			.bg 
+			{
+				background: #348cb2 url("bgim1.jpg") bottom left;
+				background-repeat: repeat-x;
+				background-repeat: no-repeat;
+        	    background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;  
+				height: 100%;
+				position: fixed;
+				width: 100%;
+			}
+			.main 
+			{
+				top: 10px;
+				position: fixed;
+				text-align: center;
+				width: 100%;
+			}
+			/*header*/
+			.header nav li
+			{
+				display: inline-block;
+				width: 10%;
+			}
+			.header nav a
+			{
+				font-size: 30px;
+				line-height: 40px;															
+			}
+			/*footer*/		
+			.footer nav li
+			{
+				display: inline-block;
+				width: 45px;
+				line-height: 100px;
+			}
+			.footer nav a
+			{
+				border-radius: 100%;
+				border: solid white 1px;
+				display: block;
+				font-size: 15px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				width: 40px;															
+			}
+			.footer nav a span 
+			{
+				display: none;
+			}
+			.team-section
+			{
+				text-align: center;
+				padding: 10px;
+			}	
+			.ps li
+			{
+				display: inline-block;
+				width: 170px;
+				line-height: 10px;
+			}
+			.ps a
+			{
+				display: inline-block;
+				width: 130px;
+				height: 130px;
+				line-height: 130px;
+				border-radius: 100%;
+				border: solid white 1.5px;
+				font-size: 10px;
+				overflow: hidden;
+			}
+			.ps a img
+			{
+				width: 100%;
+				filter: grayscale(100%);
+				transition: 0.1s all;
+			}
+			/*.ps a:hover >img
+			{
+				filter: none;
+			}	*/
+		</style>
+	</head>
+	<body>
+			<div class="bg"></div>
+			<div class="main">
+					<header class="header">
+						<nav>
+							<ul>
+								<h2>			
+								<li><a href="index.html">HOME</a></li>
+								<li><a href="signin.html">LOGIN</a></li>
+								<li><a href="aboutus.html">ABOUT </a></li>
+								</h2>
+							</ul>
+						</nav>
+					</header>
+		</p>
+		<h1 style="font-family:  font-size: 80px; color:white;"><center></center></h1>
+		<fieldset style="margin-right: 420px;margin-left: 480px;margin-bottom: 100px;margin-top:10px; border-color: white;">
+		<table cellpadding="6" cellspacing="8">
+			<form action="signin.php" method="post">
+				<tr><br/>
+					<td style="font-family: font-size: 25px; color:white;">E-mail:</td>
+					<td><input type="text" name="email" id="email"  placeholder="Enter E-mail Address" style="font-family: font-size: 18px;"></td>
+					<td><span id="em" style="font-family: candara; font-size: 15px;"></span></td>
+				</tr>
+				<tr>
+					<td style="font-family: font-size: 25px; color:white;">Password:</td>
+					<td><input type="password" name="password" id="password" placeholder="Enter Password" style="font-family:  font-size: 18px;"></td>
+					<td><span id="pw" style="font-family: candara; font-size: 15px;"></span></td>
+				</tr>
+				<tr></tr>
+				<tr>
+				<td></td>	
+				<td style="text-align: left;"><br /><input type="submit" name="submit" value="Login" style="color: white; font-size: 20px; font-family: "></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td colspan="2"><b style="font-family: font-size: 20px;"><a href="signup.html" style="color: white;">Sign Up</a></b></td>
+				</tr>
+			</form>
+		</table>
+		</fieldset>
+	</center>
+	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-bb69d628-aab1-47a5-ba95-a3c63c9f7ae1"></div>
+
+</body>
+<script type="text/javascript">
+			function valemail() 
+			{
+				var a;
+				a=document.getElementById('email').value;
+				if(a==null||a=="")
+        		{
+            			document.getElementById("em").innerHTML ="Need to be filledout!";
+           				document.getElementById("em").style.color ='red' ;
+        		}
+				if (a.indexOf('@') <= 0)
+	 			{
+                		document.getElementById("em").innerHTML ="Invalid Email!";
+						document.getElementById("em").style.color ='red' ;
+				}	
+                else
+				{
+					    document.getElementById("em").innerHTML ="";
+						document.getElementById("em").style.color ='red';
+				}
+			}
+			document.getElementById("email").addEventListener("keyup",valemail);	
+			function pass()
+			{
+                var b;
+                b = document.getElementById("password").value;
+                if(b==null||b=="")
+        		{
+            			document.getElementById("pw").innerHTML ="Need to be filledout!";
+            			document.getElementById("pw").style.color ='red' ;
+        		}
+                if (b.length != 8)
+                {
+                		document.getElementById("pw").innerHTML ="Invalid Password!";
+						document.getElementById("pw").style.color ='red' ;		
+                }
+                else
+				{
+						document.getElementById("pw").innerHTML ="";
+						document.getElementById("pw").style.color ='red';	
+				}
+			}
+			document.getElementById("password").addEventListener("keyup",pass);	
+		</script>
+</html>
